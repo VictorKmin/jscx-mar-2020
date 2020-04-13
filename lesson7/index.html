@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        #green {
+            background-color: greenyellow;
+            width: 200px;
+            height: 200px;
+        }
+
+        #red {
+            background-color: pink;
+            width: 300px;
+            height: 300px;
+        }
+
+        #blue {
+            background-color: cornflowerblue;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+
+<!--&lt;!&ndash;COMMEMFD&ndash;&gt;-->
+
+<div id="blue">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, aperiam asperiores eaque iste itaque non odit
+    quaerat reprehenderit tenetur vero? Dolor earum explicabo id inventore nostrum quae repudiandae soluta, vitae.
+</div>
+
+<!--<div id="red">-->
+<!--    <p class="myClass"> xxx </p>-->
+<!--</div>-->
+
+
+<!--<div id="green">-->
+<!--    <p class="myClass"> xxx2 </p>-->
+<!--    <p class="myClass"> xxx3 </p>-->
+<!--    <p class="myClass"> xxx4 </p>-->
+<!--</div>-->
+
+
+<!--<div id="red">-->
+<!--    <div id="green">-->
+<!--        <div id="blue"></div>-->
+<!--    </div>-->
+<!--</div>-->
+
+<form action="" id="form" name="myForm2">
+    <input type="text" value="22" name="someText">
+    <input type="checkbox" name="check1">
+    <input type="checkbox" name="check1" checked="checked">
+
+    <input type="radio" name="rad" checked>
+    <input type="radio" name="rad">
+    <input type="submit" value="OK" name="submit">
+</form>
+
+
+<script>
+    // // // let redId = document.querySelectorAll('#green .myClass');
+    // // // // let redCalss = document.querySelectorAll('.red');
+    // // // // // let element = document.querySelectorAll('#red');
+    // // // // Object.assign(redId, redCalss)
+    // // //
+    // // // // let childNodes = document.body.childNodes;
+    // // //
+    // // // for (const redIdElement of redId) {
+    // // //     redIdElement.setAttribute('myAttr', 'classs222');
+    // // //
+    // // //     let b = redIdElement.hasAttribute('myAttr');
+    // // //     console.log(b);
+    // // // }
+    // // //
+    // // // console.log(redId);
+    // //
+    // // let forms = document.forms.form;
+    // //
+    // // let txtInpt = forms.someText;
+    // // let chk = forms.check1;
+    // // let rad = forms.rad;
+    // //
+    // // console.log(forms);
+    // // console.log(txtInpt.value);
+    // // console.log(chk);
+    // // console.log(rad);
+    //
+    // let blueDiv = document.getElementById('blue');
+    //
+    // // blueDiv.onclick = () => {
+    // //     if (blueDiv.style.backgroundColor === 'red') {
+    // //         blueDiv.style.backgroundColor = 'cornflowerblue'
+    // //     } else {
+    // //         blueDiv.style.backgroundColor = 'red'
+    // //     }
+    // // }
+    // //
+    // // blueDiv.onclick = () => {
+    // //     document.forms.myForm2.someText.value = 'CLOCKNUV NA DIVKU'
+    // // }
+    // //
+    // // document.forms.myForm2.someText.oninput = () => {
+    // //     let txtVal = document.forms.myForm2.someText.value;
+    // //
+    // //     document.getElementById('red').innerText = txtVal
+    // // }
+    //
+    // // blueDiv.onmouseover = () => {
+    // //     blueDiv.style.display = 'none'
+    // // }
+    // //
+    // // blueDiv.onmouseleave = () => {
+    // //     blueDiv.style.display = 'none'
+    // // }
+    // //
+    // //
+    // // blueDiv.oncopy = () => {
+    // //     return false;
+    // // }
+    //
+    //
+    // blueDiv.onmousemove = (ev) => {
+    //     const x = ev.x;
+    //     const y = ev.y;
+    //
+    //     blueDiv.style.color = `rgb(${x}, ${y}, ${x})`
+    // }
+    //
+    // let myForm2 = document.forms.myForm2;
+    //
+    // myForm2.submit.addEventListener('click', (ev) => {
+    //     ev.preventDefault();
+    // })
+    //
+    //
+    // let blue = document.getElementById('blue');
+    // let red = document.getElementById('red');
+    // let green = document.getElementById('green');
+    //
+    // red.addEventListener('click', (ev) => {
+    //     // ev.stopPropagation();
+    //     console.log('red');
+    // });
+    //
+    // blue.addEventListener('click', (ev) => {
+    //     console.log(ev);
+    //     // ev.stopPropagation();
+    //     console.log('blue');
+    // });
+    //
+    // green.addEventListener('click', (ev) => {
+    //     console.log('green');
+    // });
+
+
+    // let users = [
+    //     {name: 'Sasha', age: 22},
+    //     {name: 'Yevhen', age: 18},
+    //     {name: 'Taras', age: 28},
+    //     {name: 'Alex', age: 25},
+    //     {name: 'Kolya', age: 20},
+    // ];
+    //
+    //
+    // users.forEach(user => {
+    //     const div = document.createElement('div');
+    //     div.innerText = `name: ${user.name}, age: ${user.age}`;
+    //
+    //     const btn = document.createElement('button');
+    //     btn.innerText = 'REMOVE';
+    //
+    //     btn.onclick = (ev) => {
+    //         ev.target.parentElement.innerHTML = 'removed'
+    //     }
+    //
+    //     div.appendChild(btn)
+    //
+    //     div.style.backgroundColor = 'pink'
+    //     div.style.margin = '30px'
+    //
+    //     document.body.appendChild(div)
+    // });
+
+
+    // let name = 'Viktor';
+    //
+    // let obj = {
+    //     name: 'Dima',
+    //     age: 22,
+    //     car: {
+    //         model: 'X',
+    //         year: 1999
+    //     }
+    // };
+
+
+    // const {age, ...other} = obj;
+    //
+    // let obj2 = {...obj, girl: true};
+    //
+    // obj2.name = 'Pasha'
+    //
+    // console.log(obj);
+    // console.log(obj2);
+    //
+    // // const dimas = obj.name
+    //
+    // console.log(obj);
+    // console.log(age);
+    // console.log(name);
+    // console.log(car);
+    //
+    // let arr = ['Miroslav', 'Max', 'Sasha', 'Taras', 'Vitalii'];
+    //
+    // let arr2 = [...arr, 'Dima', 'Roman']
+    //
+    // console.log(arr2);
+    // //
+    // const [miroslav,max, ...spread] = arr;
+    //
+    // console.log(miroslav);
+    // console.log(spread);
+    //
+    //
+    // const arr2 = [...arr];
+    //
+    // arr2[0] = 'Rostik';
+    //
+    // console.log(arr);
+    // console.log(arr2);
+    //
+    // Math.max(...arg)
+
+
+    let obj = {
+        name: 'Dima',
+        age: 22,
+        cars: ['Zaz', 'Mers', 'Bmw']
+    };
+
+    const {cars: [,mers]} = obj;
+
+    let arr = [
+        {model: 'X', price: 20002},
+        {model: 'T', price: 20089},
+        {model: 'Z', price: 23000},
+        {model: 'O', price: 99900},
+    ]
+
+    let [, {price}] = arr
+
+    console.log(price);
+
+</script>
+
+</body>
+</html>
