@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<input type="text" id="inpt">
+
+<video src="" id="vid" style="width: 100px; height: 100px;"></video>
+
+
+<script>
+
+    // // localStorage.setItem('myKey', 'TEst');
+    // // localStorage.setItem('user', 'Max');
+    // // localStorage.setItem('car', false);
+    // // let textFormInpt = localStorage.getItem('myKey');
+    // //
+    // // // localStorage.clear()
+    // //
+    // // // localStorage.removeItem('user')
+    // //
+    // //
+    // //
+    // // document.write(textFormInpt)
+    //
+    //
+    // // let user = {
+    // //     name: 'Viktor',
+    // //     age: 24,
+    // //     girl: {
+    // //         name: 'Kari'
+    // //     }
+    // // }
+    // //
+    // // let names = [{name: 'Vika', age: 20}, 'Yevhen', 'Nazar', 'Taras', 'Mila'];
+    // //
+    // // localStorage.setItem('user', JSON.stringify(user))
+    // // localStorage.setItem('name', JSON.stringify(names))
+    // //
+    // //
+    // // let textFormInpt = localStorage.getItem('myKey');
+    // //
+    // // console.log(JSON.parse(textFormInpt));
+    // let elementById = document.getElementById('inpt');
+    //
+    // let textFormInpt = localStorage.getItem('inpt');
+    //
+    // if (textFormInpt) {
+    //     elementById.value = textFormInpt
+    // }
+    //
+    //
+    // elementById.oninput = () => {
+    //     const value = elementById.value;
+    //
+    //     localStorage.setItem('inpt', value)
+    // }
+    // console.log(document);
+    // console.log(innerHeight);
+    // console.log(innerWidth);
+    //
+    // console.log(screen.height)
+    // console.log(screen.width)
+    //
+    //
+    // console.log(navigator.appVersion)
+    //
+    //
+    // navigator.geolocation.getCurrentPosition(({coords}) => {
+    //     const {latitude, longitude} = coords
+    //
+    //     console.log(latitude);
+    //     console.log(longitude);
+    // })
+    // let videoEL = document.getElementById('vid');
+    //
+    // navigator.mediaDevices.getUserMedia({video: true, audio: true})
+    // .then(video => {
+    //     videoEL.srcObject = video;
+    //
+    //     videoEL.play()
+    // })
+    //
+    //
+    // history.back();
+    // history.forward();
+
+
+    //
+    // if (10 > 2) {
+    //     console.log(true);
+    // } else {
+    //     console.log(false);
+    // }
+    //
+    // (10 > 20) ? console.log(true) : console.log(false);
+    //
+    //
+    //
+    // function xIsEmpty() {
+    //     document.write('EMPTY')
+    // }
+    //
+    //
+    // function xIsGood() {
+    //     document.write('GOOD')
+    // }
+    //
+    //
+    // let x = true
+    // x ? xIsGood() : xIsEmpty()
+    //
+    // // let number;
+    // //
+    // // if (x) {
+    // //     number = 10
+    // // } else {
+    // //     number = 2
+    // // }
+    //
+    // let number = x ? 10 : 2
+    //
+    // console.log(number);
+
+
+    setTimeout(() => {
+        console.log(1);
+    }, 0)
+
+    console.log(2);
+
+    setTimeout(() => {
+        console.log(3);
+    }, 0);
+
+
+    setInterval(() => {
+        console.log('INTERVAL');
+    }, 1000)
+
+
+    // function clearHouse(isJobDone, cb) {
+    //     setTimeout(() => {
+    //         isJobDone ?
+    //             cb(null, 500) :
+    //             cb('Clear house first!')
+    //     }, 2000)
+    // }
+    //
+    // function buyJeans (reward, cb) {
+    //     setTimeout(() => {
+    //         if (reward > 200) {
+    //             cb(null, 'I got a jeans')
+    //         } else {
+    //             cb('Not enough money ')
+    //         }
+    //     }, 1500)
+    // }
+    //
+    //
+    // clearHouse(true, (err, reward) => {
+    //     if (err) {
+    //         console.log(err)
+    //     } else {
+    //         console.log('I GOT ' + reward);
+    //
+    //
+    //         buyJeans(reward, (err, data) => {
+    //             if (err) {
+    //                 console.log(err)
+    //             } else {
+    //                 console.log(data)
+    //             }
+    //         })
+    //     }
+    // });
+
+
+
+    // let x = 0;
+    //
+    // setTimeout(() => {
+    //     x = 999;
+    // }, 1000)
+    //
+    // console.log(x);
+
+</script>
+
+</body>
+</html>
