@@ -1,0 +1,404 @@
+// db.getCollection('resturaunts').insert({
+//         model: "Yamaha Fazer",
+//         year: 2008,
+//         price: 3500
+//     });//
+
+
+// db.getCollection('resturaunts').insert({
+//         name: "Dima",
+//         profesion: 'IT Dev',
+//         cars: [
+//         {
+//                 model: 'Vovlo'
+//             },
+//             {
+//                  model: 'Mers'
+//              }
+//     ]
+//  });
+
+
+// 
+// db.getCollection('resturaunts').find({
+//     profesion: "IT Dev"
+// })
+
+
+
+// db.getCollection('resturaunts').find({
+//         borough: "Bronx",
+//         cuisine: "Bakery"
+// })
+// 
+
+// db.getCollection('resturaunts').find({
+//       $or: [
+//         { borough: "Bronx" },
+//         { cuisine: "Bakery" }
+//       ]
+// })
+// 
+
+// db.getCollection('resturaunts').find({
+//     "address.building": "1007"
+// })
+// 
+
+
+// 
+// db.getCollection('resturaunts').find({
+//         borough: "bronx"
+//     })
+// 
+
+
+// db.getCollection('teacher').find({
+//     payment: {
+//             $gt: 2500
+//         }
+// })
+
+
+
+
+// db.getCollection('resturaunts').find({
+//         "grades.score": {
+//                 $gt: 80
+//             }
+//     })
+
+// db.getCollection('teacher').find({
+//     payment: {
+// //             $gte: 2500 // >=
+// //             $lt: 2500 // <
+// //             $lte: 2500 // <
+// //             $eq 2500 // ===
+// //             $ne: 2500 // !==
+//         }
+// })
+
+
+
+
+
+// db.getCollection('teacher').find(
+// {},
+// {
+//     name: 1,
+//     payment: 1,
+//     _id: 0
+//  }
+// )
+// 
+
+// db.getCollection('teacher').insert({
+//         name: "Svyat",
+//         hobby: "Java"
+//     })
+// 
+// 
+// 
+
+// 
+// db.getCollection('teacher').find({
+//             name: /^o/i
+//     })
+
+
+// db.getCollection('teacher').find({
+//             name: /ch$/
+//     })
+// 
+
+// db.getCollection('teacher').find({
+//             name: /.*tor.*/
+//     })
+// /
+
+
+// db.getCollection('teacher')
+//    .find({})
+//    .sort({ lesson: 1 })
+
+// 
+
+// db.getCollection('resturaunts').find({}).limit(3).skip(0)
+// 
+
+
+
+
+// db.getCollection('resturaunts').find({
+//         borough: {
+//                 $in: ['Bronx', "Brooklyn"]
+//             }
+//     })
+// 
+
+
+
+// db.getCollection('resturaunts').find({
+//         borough: {
+//                 $nin: ['Bronx', "Brooklyn"]
+//             }
+//     })
+
+
+// db.getCollection('resturaunts').find({
+//         borough: {
+//                 $not: {
+//                         $in: ['Bronx', "Brooklyn"]
+//                     }
+//             }
+//     })
+// 
+
+// 
+// 
+// db.getCollection('resturaunts').find({
+//        "address.coord.1" : {
+//                 $lte: 40
+//            }
+// })
+// 
+
+
+
+// 
+// db.getCollection('teacher').find({
+//         cars: {
+//                 $exists: false
+//             }
+//     })
+
+
+// 
+// db.getCollection('teacher').find({
+//         cars: {
+//             $not: {
+//                       $exists: true
+//                 }
+//             }
+//     })// 
+
+// 
+// db.getCollection('teacher').find({
+//         cars: {
+//                 $size: 3
+//             }
+//     })
+// 
+
+
+// 
+// db.getCollection('teacher').update(
+// {}, // find
+// {}, // update
+// {}  // option
+// )
+// 
+
+
+// 
+// db.getCollection('teacher').update(
+// {
+//       payment: 2500
+// },
+// {
+//        $set: {
+//                 cars: [ {model: "Volvo"} ,{ model: 'Zaz'} ]
+//            }
+// },
+// 
+// {
+//    multi: true
+// }
+// )
+// 
+
+
+
+// db.getCollection('teacher').update(
+// {
+//       payment: 2100
+// },
+// {
+//        $set: {
+//                payment: 3100
+//            }
+// },
+// 
+// {
+//    multi: true
+// }
+// )
+// 
+
+
+
+// db.getCollection('teacher').update(
+// {
+//       cars: {
+//             $size: 3
+//           }
+// },
+// {
+//        $set: {
+//                "cars.$[].model": "Lasiped"
+//            }
+// },
+// 
+// {
+//    multi: true
+// })
+
+
+
+// db.getCollection('resturaunts').aggregate([
+//     {
+//             $group: {
+//                     "_id": "$borough",
+//                     "countOfRest": {
+//                             $sum: 1
+//                         }
+//                 }
+//      } 
+// ])
+// 
+
+
+// db.getCollection('resturaunts').aggregate([
+//     {
+//           $count: "allRests"
+//      } 
+// ])
+// 
+
+db.getCollection('resturaunts').aggregate([
+    {
+            $unwind: "$grades"
+     }
+])
+
+
+
+
+// db.getCollection('teacher').aggregate([
+//     {},
+//     {},
+//     {}
+// ])
+
+
+// 
+// db.getCollection('teacher').aggregate([
+//     {
+//           $group: {
+//                 "_id": '$class_curator',
+//                 maxPayment: {
+// //                         $max: "$payment"
+// //                         $min: "$payment"
+// //                         $avg: "$payment"
+//                         $sum: "$payment"
+//                     }
+//               }
+//      }
+// ])
+// 
+
+
+// db.getCollection('teacher').aggregate([
+//     {
+//           $group: {
+//                 "_id": '$class_curator',
+//                 maxPayment: {
+//                         $max: "$payment"
+//                     },
+//                 avgPay: {
+//                         $avg: "$payment"
+//                     }
+//               }
+//      },
+//      
+//      {
+//           $match: {
+//                     maxPayment: {
+//                             $gte: 2500
+//                         }
+//               }    
+//       },
+//       
+//       {
+//            $sort: { maxPayment: -1 }
+//        },
+//        
+//        {
+//             $project: {
+//                       class: "$_id",
+//                       maxPayment: 1,   
+//                       avgPay: 1,
+//                       _id: 0
+//                 }
+//        }
+//        
+// ])
+// db.getCollection('teacher').aggregate([
+//        
+//        {
+//             $project: {
+//                       name: 1
+//                       email: 1,   
+//                       password: 1
+//                 }
+//        },
+//        
+//     {
+//           $group: {
+//                 "_id": '$class_curator',
+//                 maxPayment: {
+//                         $max: "$payment" // MAX(payment) AS  maxayment
+//                     },
+//                 avgPay: {
+//                         $avg: "$payment"
+//                     }
+//               }
+//      },
+//      
+//      {
+//           $match: {
+//                     maxPayment: {
+//                             $gte: 2500
+//                      }
+//               }    
+//       },
+//       
+//       {
+//            $sort: { maxPayment: -1 }
+//        }   
+// ])
+// 
+// 
+// 
+
+
+
+// 
+// db.getCollection('teacher').remove({
+//         name: {
+//                 $exists: false
+//             }
+//     })
+// 
+
+
+
+db.getCollection('teacher').aggregate([
+      {
+          $group: {
+                "_id": { class: '$class_curator', name: "$name" }, // GROUP BY class_curator, name
+//                 "_id": "$name",
+            }
+      }
+])
+// 
