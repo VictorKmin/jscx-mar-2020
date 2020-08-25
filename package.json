@@ -1,0 +1,8 @@
+{
+  "name": "jscx-mar-2020",
+  "version": "1.0.0",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.1.0"
+  }
+}
