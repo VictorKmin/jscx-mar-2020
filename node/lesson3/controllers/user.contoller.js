@@ -1,0 +1,30 @@
+const userService = require('../services/user.service');
+
+module.exports = {
+  getAllUsers: (req, res) => {
+    const users = userService.fetchAll();
+    res.render('users', { arr: users });
+  },
+
+  getUserById: (req, res) => {
+    console.log(req.params);
+    const user = userService.getUserByName(req.params.userName)
+
+    res.json(user);
+  },
+
+  removeUser: (req, res) => {
+    console.log(req.params);
+    const user = userService.removeUserByName(req.params.userName)
+
+    res.json(user);
+  },
+
+  createUser: (req, res) => {
+    console.log(req.body);
+
+    userService.create(req.body);
+
+    res.end('Users created');
+  }
+}
