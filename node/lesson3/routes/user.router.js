@@ -6,7 +6,7 @@ const { user } = require('../middlewares');
 
 userRouter.get('/', controller.getAllUsers)
 userRouter.get('/:userName', controller.getUserById)
-userRouter.delete('/:userName', controller.removeUser)
+userRouter.delete('/:userName', user.checkIsUserPresentMiddleware, controller.removeUser)
 userRouter.post('/', user.checkUserValidityMiddleware,  controller.createUser)
 
 module.exports = userRouter;
