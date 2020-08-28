@@ -23,8 +23,8 @@ module.exports = {
   createUser: (req, res) => {
     console.log(req.body);
 
-    userService.create(req.body);
+    const newUsers = userService.create(req.body);
 
-    res.end('Users created');
+    res.json(newUsers);
   }
 }

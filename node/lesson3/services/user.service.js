@@ -1,6 +1,6 @@
 let arr = [
-  { name: "Dima", age: 22 },
-  { name: "Inna", age: 33 }
+  { id: 1, name: "Dima", age: 22 },
+  { id: 2, name: "Inna", age: 33 }
 ];
 
 module.exports = {
@@ -17,6 +17,9 @@ module.exports = {
   },
 
   create: (userObject) => {
-    arr.push(userObject)
+    const lastUserId = arr[arr.length - 1].id + 1
+    arr.push({ id: lastUserId, ...userObject });
+
+    return { id: lastUserId, ...userObject }
   }
 }
