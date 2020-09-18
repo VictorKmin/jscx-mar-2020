@@ -13,11 +13,13 @@ const {Sequelize, DataTypes } = require('sequelize');
 const fs = require('fs');
 const path = require('path');
 
+const {DB_NAME, DB_PASS, DB_USER} = require('../configs/config')
+
 module.exports = (()=> {
   let instance;
 
   function initConnection() {
-    const client = new Sequelize('auto_shop', 'user', 'user', {
+    const client = new Sequelize(DB_NAME, DB_USER, DB_PASS, {
       host: 'localhost',
       dialect: 'mysql'
     });

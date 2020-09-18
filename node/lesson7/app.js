@@ -1,7 +1,10 @@
 const express = require('express');
 const expressHandlebars = require('express-handlebars');
 const path = require('path');
+const dotenv = require('dotenv');
 const app = express();
+
+dotenv.config()
 
 const instance = require('./dataBase').getInstance();
 instance.setModels();

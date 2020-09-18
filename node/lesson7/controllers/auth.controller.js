@@ -1,4 +1,6 @@
+const { AUTHORIZATION } = require('../configs/constants');
 const { comparePasswords, tokinizer } = require('../helpers');
+const { oAuthService } = require('../services');
 
 module.exports = {
   login: async (req, res, next) => {
@@ -10,7 +12,11 @@ module.exports = {
 
       const tokens = tokinizer();
 
-      //TODO save tokens to DB
+      await oAuthService.create({
+        ...tokens,
+        user_id: user.id
+      })
+
       res.json(tokens);
     } catch (e) {
       next(e)
@@ -19,11 +25,16 @@ module.exports = {
 
   refreshToken: async (req, res, next) => {
     try {
-      const token = req.get('Authorization');
+      const user = req.user;
+      const token = req.get(AUTHORIZATION);
       const newTokensPair = tokinizer();
 
-      // TODO remove old tokens from DB
-      // TODO insert new token pair to DB
+      await oAuthService.deleteByParams({refresh_token: token});
+
+      await oAuthService.create({
+        ...newTokensPair,
+        user_id: user.id
+      })
 
       res.json(newTokensPair);
     } catch (e) {
