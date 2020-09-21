@@ -20,8 +20,8 @@ const transporter = mailer.createTransport({
   }
 });
 
-class EmailService {
-  async sendMail(userMail, action, context) {
+module.exports = {
+  sendMail: async (userMail, action, context) => {
     try {
       const templateInfo = htmlTemplates[action];
       const html = await emailTemplates.render(templateInfo.templateFileName, {...context, frontendUrl: FRONTEND_URL});
@@ -41,7 +41,5 @@ class EmailService {
     }
 
   }
+
 }
-
-
-module.exports = new EmailService();
