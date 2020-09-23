@@ -1,29 +1,47 @@
 {
   "name": "jscx-mar-2020",
   "version": "1.0.0",
-  "scripts": {
-    "start": "npx sequelize-cli db:migrate && node app.js"
-  },
+  "description": "",
+  "main": "index.js",
   "dependencies": {
     "bcrypt": "^5.0.0",
     "dotenv": "^8.2.0",
+    "email-templates": "^7.1.1",
     "express": "^4.17.1",
+    "express-fileupload": "^1.2.0",
     "express-handlebars": "^5.1.0",
+    "fs-extra": "^9.0.1",
     "joi": "^17.2.1",
     "jsonwebtoken": "^8.5.1",
     "mysql2": "^2.1.0",
     "nodemailer": "^6.4.11",
-    "email-templates": "^7.1.1",
     "nodemon": "^2.0.4",
-    "sequelize": "^6.3.4"
+    "sequelize": "^6.3.4",
+    "uuid": "^8.3.0"
   },
   "devDependencies": {
     "@types/express": "^4.17.7",
     "@types/sequelize": "^4.28.9",
     "@types/joi": "^14.3.4",
     "@types/jsonwebtoken": "^8.5.0",
+    "@types/express-fileupload": "^1.1.5",
+    "@types/fs-extra": "^9.0.1",
     "@types/nodemailer": "^6.4.0",
     "@types/email-templates": "^7.1.0",
     "sequelize-cli": "^6.2.0"
-  }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VictorKmin/jscx-mar-2020.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VictorKmin/jscx-mar-2020/issues"
+  },
+  "homepage": "https://github.com/VictorKmin/jscx-mar-2020#readme"
 }
